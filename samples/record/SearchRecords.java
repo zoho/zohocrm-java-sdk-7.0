@@ -41,7 +41,7 @@ public class SearchRecords
 		ParameterMap paramInstance = new ParameterMap();
 		paramInstance.add(SearchRecordsParam.CRITERIA, "((Last_Name:starts_with:Last Name) and (Company:starts_with:fasf\\(123\\) K))");
 		paramInstance.add(SearchRecordsParam.CRITERIA, "(External:in:TestExternal221)");
-		paramInstance.add(SearchRecordsParam.EMAIL, "abc@gmail.com");
+		paramInstance.add(SearchRecordsParam.EMAIL, "abc@zoho.com");
 		paramInstance.add(SearchRecordsParam.PHONE, "234567890");
 		paramInstance.add(SearchRecordsParam.WORD, "First Name Last Name");
 		paramInstance.add(SearchRecordsParam.CONVERTED, "both");

@@ -40,7 +40,7 @@ public class Vendors
 		record1.setId(23245234364525L);
 		record1.addFieldValue(Field.Vendors.VENDOR_NAME, "vendor_name");
 		record1.addFieldValue(Field.Vendors.PHONE, "12343213");
-		record1.addFieldValue(Field.Vendors.EMAIL, "abc@gmail.com");
+		record1.addFieldValue(Field.Vendors.EMAIL, "abc@zoho.com");
 		record1.addFieldValue(Field.Vendors.WEBSITE, null);
 		record1.addFieldValue(Field.Vendors.GL_ACCOUNT, new Choice<String>("Sales-Software"));
 		record1.addFieldValue(Field.Vendors.CATEGORY, null);

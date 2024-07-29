@@ -133,7 +133,7 @@ public class CreateRecords
 		record1.addFieldValue(Field.Events.START_DATETIME, startDateTime);
 		List<Participants> participants = new ArrayList<Participants>();
 		Participants participant1 = new Participants();
-		participant1.setEmail("abc@gmail.com");
+		participant1.setEmail("abc@zoho.com");
 		participant1.setType("email");
 		participant1.setId(34770615902017L);
 		participants.add(participant1);

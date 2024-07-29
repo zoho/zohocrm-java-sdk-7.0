@@ -39,7 +39,7 @@ public class Vendors
 		com.zoho.crm.api.record.Record record1 = new com.zoho.crm.api.record.Record();
 		record1.addFieldValue(Field.Vendors.VENDOR_NAME, "vendor_name");
 		record1.addFieldValue(Field.Vendors.PHONE, "12343213");
-		record1.addFieldValue(Field.Vendors.EMAIL, "abc@gmail.com");
+		record1.addFieldValue(Field.Vendors.EMAIL, "abc@zoho.com");
 		record1.addFieldValue(Field.Vendors.WEBSITE, null);
 		record1.addFieldValue(Field.Vendors.GL_ACCOUNT, new Choice<String>("Sales-Software"));
 		record1.addFieldValue(Field.Vendors.CATEGORY, null);

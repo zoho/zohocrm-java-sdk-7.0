@@ -50,13 +50,13 @@ public class Leads
 		record1.addFieldValue(Field.Leads.MOBILE, "200221");
 		record1.addFieldValue(Field.Leads.INDUSTRY, new Choice<String>("ERP"));
 		record1.addFieldValue(Field.Leads.EMAIL_OPT_OUT, true);
-		record1.addFieldValue(Field.Leads.EMAIL, "abc@gmail.com");
+		record1.addFieldValue(Field.Leads.EMAIL, "abc@zoho.com");
 		record1.addFieldValue(Field.Leads.FAX, "fax");
 		record1.addFieldValue(Field.Leads.WEBSITE, "website.com");
 		record1.addFieldValue(Field.Leads.NO_OF_EMPLOYEES, 10);
 		record1.addFieldValue(Field.Leads.RATING, new Choice<String>("Active"));
 		record1.addFieldValue(Field.Leads.SKYPE_ID, "Skype123");
-		record1.addFieldValue(Field.Leads.SECONDARY_EMAIL, "abc1@gmail.com");
+		record1.addFieldValue(Field.Leads.SECONDARY_EMAIL, "abc1@zoho.com");
 		record1.addFieldValue(Field.Leads.TWITTER, "twitter55");
 		// Address info of Lead
 		record1.addFieldValue(Field.Leads.CITY, "City");

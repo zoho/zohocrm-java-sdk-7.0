@@ -52,7 +52,7 @@ public class Cases
 		com.zoho.crm.api.record.Record accountName = new com.zoho.crm.api.record.Record();
 		accountName.addKeyValue("id", 3245633789213L);
 		record1.addFieldValue(Field.Cases.ACCOUNT_NAME, accountName);
-		record1.addFieldValue(Field.Cases.EMAIL, "abc@gmail.com");
+		record1.addFieldValue(Field.Cases.EMAIL, "abc@zoho.com");
 		record1.addFieldValue(Field.Cases.PRIORITY, new Choice<String>("Low"));
 		record1.addFieldValue(Field.Cases.CASE_REASON, new Choice<String>("New Problem"));
 		com.zoho.crm.api.record.Record dealName = new com.zoho.crm.api.record.Record();

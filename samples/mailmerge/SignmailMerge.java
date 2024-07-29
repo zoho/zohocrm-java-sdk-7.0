@@ -41,7 +41,7 @@ public class SignmailMerge
 		Signers signer = new Signers();
 		signer.setActionType(new Choice<String>("sign"));
 		Address recipent = new Address();
-		recipent.setValue("abc@gmail.com");
+		recipent.setValue("abc@zoho.com");
 		signer.setRecipient(recipent);
 		signers.add(signer);
 		mailmerge.setSigners(signers);

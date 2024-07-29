@@ -39,7 +39,7 @@ public class Contacts
 		com.zoho.crm.api.record.Record record1 = new com.zoho.crm.api.record.Record();
 		record1.setId(32324324494343L);
 		record1.addFieldValue(Field.Contacts.LAST_NAME, "Last Name");
-		record1.addFieldValue(Field.Contacts.EMAIL, "abc@gmail.com");
+		record1.addFieldValue(Field.Contacts.EMAIL, "abc@zoho.com");
 		com.zoho.crm.api.record.Record accountname = new com.zoho.crm.api.record.Record();
 		accountname.setId(3213211322321323L);
 		record1.addFieldValue(Field.Contacts.ACCOUNT_NAME, accountname);
@@ -56,7 +56,7 @@ public class Contacts
 		vendorName.setId(3121323L);
 		record1.addFieldValue(Field.Contacts.VENDOR_NAME, vendorName);
 		record1.addFieldValue(Field.Contacts.EMAIL_OPT_OUT, false);
-		record1.addFieldValue(Field.Contacts.SECONDARY_EMAIL, "abc2@gmail.com");
+		record1.addFieldValue(Field.Contacts.SECONDARY_EMAIL, "abc2@zoho.com");
 		com.zoho.crm.api.record.Record contact = new com.zoho.crm.api.record.Record();
 		contact.setId(3322321323L);
 		record1.addFieldValue(Field.Contacts.REPORTING_TO, contact);
