@@ -254,15 +254,18 @@ public class JSONConverter extends Converter
 		{
 			for (String keyName : moduleDetail.keySet())
 			{
-				JSONObject keyDetail = moduleDetail.getJSONObject(keyName);
-				String name = keyDetail.getString(Constants.NAME);
-				if (keyDetail.has(Constants.REQUIRED) && keyDetail.getBoolean(Constants.REQUIRED))
+				JSONObject keyDetail = moduleDetail.optJSONObject(keyName);
+				if(keyDetail != null && keyDetail.has(Constants.NAME))
 				{
-					requiredKeys.put(name, true);
-				}
-				if (keyDetail.has(Constants.PRIMARY) && keyDetail.getBoolean(Constants.PRIMARY))
-				{
-					primaryKeys.put(name, true);
+					String name = keyDetail.getString(Constants.NAME);
+					if (keyDetail.has(Constants.REQUIRED) && keyDetail.getBoolean(Constants.REQUIRED))
+					{
+						requiredKeys.put(name, true);
+					}
+					if (keyDetail.has(Constants.PRIMARY) && keyDetail.getBoolean(Constants.PRIMARY))
+					{
+						primaryKeys.put(name, true);
+					}
 				}
 			}
 			for (String keyName : classDetail.keySet())
@@ -289,16 +292,16 @@ public class JSONConverter extends Converter
 			Object keyValue = keyValues.containsKey(keyName) ? keyValues.get(keyName) : null;
 			Object jsonValue = null;
 			String memberName = buildName(keyName);
-			Boolean customHandling = Boolean.FALSE;
+			boolean customHandling = false;
 			if (moduleDetail.length() > 0 && (moduleDetail.has(keyName) || moduleDetail.has(memberName)))
 			{
 				if (moduleDetail.has(keyName))
 				{
-					keyDetail = (JSONObject) moduleDetail.getJSONObject(keyName);// incase of user spec json
+					keyDetail = moduleDetail.optJSONObject(keyName);// incase of user spec json
 				}
 				else
 				{
-					keyDetail = (JSONObject) moduleDetail.getJSONObject(memberName);// json details
+					keyDetail = moduleDetail.optJSONObject(memberName);// json details
 				}
 			}
 			else if (classDetail.has(memberName))
@@ -307,11 +310,11 @@ public class JSONConverter extends Converter
 			}
 			else
 			{
-				customHandling = Boolean.TRUE;
+				customHandling = true;
 			}
 			if (keyValue != null)
 			{
-				if (keyDetail.length() > 0)
+				if (keyDetail != null && keyDetail.length() > 0)
 				{
 					if ((keyDetail.has(Constants.READ_ONLY) && keyDetail.getBoolean(Constants.READ_ONLY)) || !keyDetail.has(Constants.NAME))// read only or no keyName
 					{
@@ -324,6 +327,11 @@ public class JSONConverter extends Converter
 				}
 				else
 				{
+					if(keyDetail == null || keyDetail.length() == 0)
+					{
+						keyDetail = new JSONObject();
+						customHandling = true;
+					}
 					if (customHandling && !(keyValue instanceof List) && !(keyValue instanceof Map) && !(keyValue instanceof Choice))
 					{
 						if (Constants.PRIMITIVE_TYPES.contains(keyValue.getClass().getSimpleName()))
