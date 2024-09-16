@@ -101,7 +101,8 @@ public class CreateField
 		picklistvalue.setDisplayValue("South");
 		picklistvalue.setActualValue("IN_South");
 		picklistvalues.add(picklistvalue);
-		
+
+		picklistfield.setPickListValues(picklistvalues);
 		picklistfield.setProfiles(picklistfieldprofiles);
 		picklistfield.setPickListValuesSortedLexically(true);
 		picklistfield.setEnableColourCode(true);
