@@ -25,6 +25,10 @@ License
 
 ## Latest Version
 
+- [4.0.0](/versions/4.0.0/README.md)
+
+    - Email Related Records Email class threadId field datatype changed(Long to String).
+
 - [3.1.0](/versions/3.1.0/README.md)
 
     - Supported delete field in PickListValue in Fields API.
@@ -60,10 +64,10 @@ For older versions, please [refer](https://github.com/zoho/zohocrm-java-sdk-7.0/
 ## Including the SDK in your project
 You can include the SDK to your project using:
 - Maven
-- [Gradle](/versions/3.1.0/README.md#including-the-sdk-in-your-project)
-- [Download SDK jar](https://maven.zohodl.com/com/zoho/crm/zohocrm-java-sdk-7-0/3.1.0/zohocrm-java-sdk-7-0-3.1.0.jar)
+- [Gradle](/versions/4.0.0/README.md#including-the-sdk-in-your-project)
+- [Download SDK jar](https://maven.zohodl.com/com/zoho/crm/zohocrm-java-sdk-7-0/4.0.0/zohocrm-java-sdk-7-0-4.0.0.jar)
 
-For including the latest [version](https://github.com/zoho/zohocrm-java-sdk-7.0/releases/tag/3.1.0) using Maven, include the following in your **pom.xml** file, which will get created once your **Java** project is created using Maven.
+For including the latest [version](https://github.com/zoho/zohocrm-java-sdk-7.0/releases/tag/4.0.0) using Maven, include the following in your **pom.xml** file, which will get created once your **Java** project is created using Maven.
 
     ```xml
     <repositories>
@@ -76,7 +80,7 @@ For including the latest [version](https://github.com/zoho/zohocrm-java-sdk-7.0/
         <dependency>
             <groupId>com.zoho.crm</groupId>
             <artifactId>zohocrm-java-sdk-7-0</artifactId>
-            <version>3.1.0</version>
+            <version>4.0.0</version>
         </dependency>
     </dependencies>
     ```
@@ -96,4 +100,4 @@ For example, if you generate the tokens for your Sandbox environment in the CN d
 
 ---
 
-For more details, kindly refer [here](/versions/3.1.0/README.md).
+For more details, kindly refer [here](/versions/4.0.0/README.md).
