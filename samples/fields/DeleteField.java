@@ -1,13 +1,10 @@
 package samples.fields;
 
-import java.lang.reflect.Field;
-import java.util.List;
-import java.util.Map;
-
 import com.zoho.api.authenticator.OAuthToken;
 import com.zoho.api.authenticator.Token;
 import com.zoho.crm.api.Initializer;
 import com.zoho.crm.api.ParameterMap;
+import com.zoho.crm.api.dc.DataCenter.Environment;
 import com.zoho.crm.api.dc.USDataCenter;
 import com.zoho.crm.api.fields.APIException;
 import com.zoho.crm.api.fields.ActionHandler;
@@ -16,13 +13,15 @@ import com.zoho.crm.api.fields.ActionWrapper;
 import com.zoho.crm.api.fields.FieldsOperations;
 import com.zoho.crm.api.fields.FieldsOperations.CreateFieldParam;
 import com.zoho.crm.api.fields.SuccessResponse;
-import com.zoho.crm.api.dc.DataCenter.Environment;
 import com.zoho.crm.api.util.APIResponse;
 import com.zoho.crm.api.util.Model;
+import java.lang.reflect.Field;
+import java.util.List;
+import java.util.Map;
 
 public class DeleteField
 {
-	public static void deleteField(Long layoutId, String module, Long fieldId) throws Exception
+	public static void deleteField(String module, Long fieldId) throws Exception
 	{
 		FieldsOperations fieldsOperations = new FieldsOperations();
 		ParameterMap paramInstance = new ParameterMap();
@@ -101,9 +100,8 @@ public class DeleteField
 			Token token = new OAuthToken.Builder().clientID("Client_Id").clientSecret("Client_Secret").refreshToken("Refresh_Token").build();
 			new Initializer.Builder().environment(environment).token(token).initialize();
 			String moduleAPIName = "Leads";
-			Long layoutId = 349001l;
 			Long fieldId = 3491l;
-			deleteField(layoutId, moduleAPIName, fieldId);
+			deleteField(moduleAPIName, fieldId);
 		}
 		catch (Exception e)
 		{
