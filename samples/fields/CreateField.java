@@ -31,7 +31,7 @@ import com.zoho.crm.api.util.Model;
 
 public class CreateField
 {
-	public static void createField(Long layoutId, String module) throws Exception
+	public static void createField(String module) throws Exception
 	{
 		FieldsOperations fieldsOperations = new FieldsOperations();
 		BodyWrapper bodyWrapper = new BodyWrapper();
@@ -185,8 +185,7 @@ public class CreateField
 			Token token = new OAuthToken.Builder().clientID("Client_Id").clientSecret("Client_Secret").refreshToken("Refresh_Token").build();
 			new Initializer.Builder().environment(environment).token(token).initialize();
 			String moduleAPIName = "Leads";
-			Long layoutId = 34799001l;
-			createField(layoutId, moduleAPIName);
+			createField(moduleAPIName);
 		}
 		catch (Exception e)
 		{

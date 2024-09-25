@@ -31,7 +31,7 @@ import com.zoho.crm.api.util.Model;
 
 public class UpdateField
 {
-	public static void updateField(Long layoutId, String module, Long fieldId) throws Exception
+	public static void updateField(String module, Long fieldId) throws Exception
 	{
 		FieldsOperations fieldsOperations = new FieldsOperations();
 		BodyWrapper bodyWrapper = new BodyWrapper();
@@ -198,9 +198,8 @@ public class UpdateField
 			Token token = new OAuthToken.Builder().clientID("Client_Id").clientSecret("Client_Secret").refreshToken("Refresh_Token").build();
 			new Initializer.Builder().environment(environment).token(token).initialize();
 			String moduleAPIName = "Leads";
-			Long layoutId = 7534770167l;
 			Long fieldId = 75347706070l;
-			updateField(layoutId, moduleAPIName, fieldId);
+			updateField(moduleAPIName, fieldId);
 		}
 		catch (Exception e)
 		{
