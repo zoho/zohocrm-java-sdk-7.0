@@ -25,6 +25,66 @@ License
 
 ## Latest Version
 
+- [5.0.0](/versions/5.0.0/README.md)
+
+  - Added new **page_token** param in GetAttachmentsParam class.
+  - DealContactRolesOperations class method name chnaged(deleteContactRoleRealation to deleteContactRoleRelation).
+  - Added **category**, **sort_by**, **sort_order**, and **filters** param in GetEmailTemplatesParam class.
+  - Added new fields (**referenceValue**, **dealCategory**, and **showValue**) in fields PickListValue class.
+  - Added new **filters** param in GetInventoryTemplatesParam class.
+  - Modules displayField field datatype changed(String to Object).
+  - Added new **status** param in GetModulesParam class.
+  - Added new **paramInstance** param in ModulesOperations class **getModules** method.
+  - Added new **type** param in SearchRecordsParam class.
+  - Added new **cvid** param in RecordCountParam class.
+  - Added new **page_token**, **page**, and **per_page** param in GetRecordLockingInformationsParam class.
+  - Added new **color_code** param in CreateTagsParam class.
+  - Added new **ids** param in GetTerritoriesParam class.
+  - Added new **page** and **per_page** param in GetChildTerritoryParam class.
+  - Added new **filters**, **page**, and **per_page** param in GetAssociatedUsersCountParam class.
+  - Added new **paramInstance** param in UserGroupsOperations class **getAssociatedUsersCount** method.
+  - Deprecated and removed API methods:
+    - UsersTerritories
+      - validateBeforeTransferForAllTerritories
+      - validateBeforeTransfer
+      - delinkAndTransferFromAllTerritories
+      - delinkAndTransferFromSpecificTerritory
+  - Support for the following new APIs
+    - AuditLogExport
+      - [Download Export Audit Log Result](https://www.zoho.com/crm/developer/docs/api/v7/download-export-audit-log-result.html)
+    - Cadences
+      - [Cadence API](https://www.zoho.com/crm/developer/docs/api/v7/cadences/get-cadences.html)
+    - DealContactRoles
+      - [Remove Contact Role from a Specific Deal](https://www.zoho.com/crm/developer/docs/api/v7/remove-contact-role-from-a-specific-deal.html)
+    - InventoryConvert
+      - [Convert Inventory Records](https://www.zoho.com/crm/developer/docs/api/v7/inventory-convert.html)
+    - InventoryMassConvert
+      - [Mass Convert Inventory Records](https://www.zoho.com/crm/developer/docs/api/v7/mass-inventory-convert.html)
+      - [Get Mass Inventory Conversion Status](https://www.zoho.com/crm/developer/docs/api/v7/mass-inventory-conversion-status-api.html)
+    - Layouts
+      - [Update Custom Layout](https://www.zoho.com/crm/developer/docs/api/v7/update-custom-layout.html)
+      - [Delete Custom Layout](https://www.zoho.com/crm/developer/docs/api/v7/delete-custom-layout.html)
+      - [Activate Custom Layout](https://www.zoho.com/crm/developer/docs/api/v7/activate-custom-layout.html)
+      - [Deactivate Custom Layout](https://www.zoho.com/crm/developer/docs/api/v7/deactivate-custom-layout.html)
+    - Modules
+      - [Create Custom Module](https://www.zoho.com/crm/developer/docs/api/v7/create-custom-module-api.html)
+    - Record
+      - [Get Rich Text Fields](https://www.zoho.com/crm/developer/docs/api/v7/get-rich-text-fields.html)
+    - RecordLockingConfiguration
+      - [Record Locking Configuration APIs](https://www.zoho.com/crm/developer/docs/api/v7/get-record-locking-config.html)
+      - [Add Record Locking Configuration](https://www.zoho.com/crm/developer/docs/api/v7/add-record-locking-config.html)
+      - [Update Record Locking Configuration](https://www.zoho.com/crm/developer/docs/api/v7/update-record-locking-config.html)
+      - [Delete Record Locking Configuration](https://www.zoho.com/crm/developer/docs/api/v7/delete-record-locking-config.html)
+    - RecycleBin
+      - [Get Recycle Bin Records](https://www.zoho.com/crm/developer/docs/api/v7/get-recycle-bin.html)
+      - [Delete Recycle Bin Records](https://www.zoho.com/crm/developer/docs/api/v7/del-recycle-bin-records.html)
+    - usergroups
+      - [Associated Groups of a User](https://www.zoho.com/crm/developer/docs/api/v7/associated-groups-of-a-user.html)
+    - UsersTerritories
+      - [Remove Territories from User](https://www.zoho.com/crm/developer/docs/api/v7/remove-territories-from-user.html)
+    - ZiaEnrichment
+      - [Enrichment Configuration](https://www.zoho.com/crm/developer/docs/api/v7/zia-enrichment/get-config.html)
+
 - [4.0.0](/versions/4.0.0/README.md)
 
     - Email Related Records Email class threadId field datatype changed(Long to String).
@@ -64,10 +124,10 @@ For older versions, please [refer](https://github.com/zoho/zohocrm-java-sdk-7.0/
 ## Including the SDK in your project
 You can include the SDK to your project using:
 - Maven
-- [Gradle](/versions/4.0.0/README.md#including-the-sdk-in-your-project)
-- [Download SDK jar](https://maven.zohodl.com/com/zoho/crm/zohocrm-java-sdk-7-0/4.0.0/zohocrm-java-sdk-7-0-4.0.0.jar)
+- [Gradle](/versions/5.0.0/README.md#including-the-sdk-in-your-project)
+- [Download SDK jar](https://maven.zohodl.com/com/zoho/crm/zohocrm-java-sdk-7-0/5.0.0/zohocrm-java-sdk-7-0-5.0.0.jar)
 
-For including the latest [version](https://github.com/zoho/zohocrm-java-sdk-7.0/releases/tag/4.0.0) using Maven, include the following in your **pom.xml** file, which will get created once your **Java** project is created using Maven.
+For including the latest [version](https://github.com/zoho/zohocrm-java-sdk-7.0/releases/tag/5.0.0) using Maven, include the following in your **pom.xml** file, which will get created once your **Java** project is created using Maven.
 
     ```xml
     <repositories>
@@ -80,7 +140,7 @@ For including the latest [version](https://github.com/zoho/zohocrm-java-sdk-7.0/
         <dependency>
             <groupId>com.zoho.crm</groupId>
             <artifactId>zohocrm-java-sdk-7-0</artifactId>
-            <version>4.0.0</version>
+            <version>5.0.0</version>
         </dependency>
     </dependencies>
     ```
@@ -100,4 +160,4 @@ For example, if you generate the tokens for your Sandbox environment in the CN d
 
 ---
 
-For more details, kindly refer [here](/versions/4.0.0/README.md).
+For more details, kindly refer [here](/versions/5.0.0/README.md).
