@@ -11,6 +11,7 @@ import com.zoho.crm.api.Initializer;
 import com.zoho.crm.api.ParameterMap;
 import com.zoho.crm.api.dc.USDataCenter;
 import com.zoho.crm.api.dc.DataCenter.Environment;
+import com.zoho.crm.api.fields.PickListValue;
 import com.zoho.crm.api.layouts.APIException;
 import com.zoho.crm.api.layouts.ActionHandler;
 import com.zoho.crm.api.layouts.ActionResponse;
@@ -49,6 +50,21 @@ public class UpdateCustomLayout
 		sectionField = new SectionField();
 		sectionField.setId(34778447113l);
 		sectionField.setFieldLabel("Subform123");
+		List<PickListValue> picklistvalues = new ArrayList<PickListValue>();
+		
+		// Sample for adding picklist values to picklist field.
+		PickListValue picklistvalue = new PickListValue();
+		picklistvalue = new PickListValue();
+		picklistvalue.setDisplayValue("Left");
+		picklistvalue.setActualValue("IN_Left");
+		picklistvalues.add(picklistvalue);
+		
+		picklistvalue = new PickListValue();
+		picklistvalue.setDisplayValue("Top");
+		picklistvalue.setActualValue("IN_Top");
+		picklistvalues.add(picklistvalue);
+		
+		sectionField.setPickListValues(picklistvalues);
 		sectionFields.add(sectionField);
 		
 		sectionField = new SectionField();
