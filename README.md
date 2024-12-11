@@ -32,7 +32,7 @@ License
   - Added **category**, **sort_by**, **sort_order**, and **filters** param in GetEmailTemplatesParam class.
   - Added new fields (**referenceValue**, **dealCategory**, and **showValue**) in fields PickListValue class.
   - Added new **filters** param in GetInventoryTemplatesParam class.
-  - Modules displayField field datatype changed(String to Object).
+  - Modules **displayField** field datatype changed(String to Object).
   - Added new **status** param in GetModulesParam class.
   - Added new **paramInstance** param in ModulesOperations class **getModules** method.
   - Added new **type** param in SearchRecordsParam class.
@@ -78,7 +78,7 @@ License
     - RecycleBin
       - [Get Recycle Bin Records](https://www.zoho.com/crm/developer/docs/api/v7/get-recycle-bin.html)
       - [Delete Recycle Bin Records](https://www.zoho.com/crm/developer/docs/api/v7/del-recycle-bin-records.html)
-    - usergroups
+    - UserGroups
       - [Associated Groups of a User](https://www.zoho.com/crm/developer/docs/api/v7/associated-groups-of-a-user.html)
     - UsersTerritories
       - [Remove Territories from User](https://www.zoho.com/crm/developer/docs/api/v7/remove-territories-from-user.html)
