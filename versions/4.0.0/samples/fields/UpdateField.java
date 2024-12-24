@@ -77,7 +77,7 @@ public class UpdateField
 		picklistfield.setLength(120);
 		List<Profile> picklistfieldprofiles = new ArrayList<Profile>();
 		Profile profile1 = new Profile();
-		profile1.setId(753477000000395001l);
+		profile1.setId(753477395001l);
 		profile1.setPermissionType("read_write");
 		picklistfieldprofiles.add(profile1);
 		

@@ -41,19 +41,19 @@ public class UpdateRecordLockingConfigurations
 		List<LockingRules> lockingRules = new ArrayList<LockingRules>();
 		
 		LockingRules lockingRule = new LockingRules();
-		lockingRule.setId(5843104000000766010l);
+		lockingRule.setId(5843104766010l);
 		lockingRule.setDelete(true);
 		lockingRules.add(lockingRule);
 		
 		lockingRule = new LockingRules();
 		lockingRule.setName("email rule 34");
-		lockingRule.setId(5843104000000766034l);
+		lockingRule.setId(5843104766034l);
 		lockingRule.setLockExistingRecords(false);
 		Criteria criteria = new Criteria();
 		criteria.setComparator("equal");
 		com.zoho.crm.api.recordlockingconfiguration.Field field1 = new com.zoho.crm.api.recordlockingconfiguration.Field();
 		field1.setAPIName("Email");
-		field1.setId(5843104000000002599l);
+		field1.setId(5843104002599l);
 		criteria.setField(field1);
 		criteria.setValue("test@zoho.com");
 		lockingRule.setCriteria(criteria);
@@ -66,7 +66,7 @@ public class UpdateRecordLockingConfigurations
 		criteria1.setComparator("equal");
 		com.zoho.crm.api.recordlockingconfiguration.Field field12 = new com.zoho.crm.api.recordlockingconfiguration.Field();
 		field12.setAPIName("Email");
-		field12.setId(5843104000000002599l);
+		field12.setId(5843104002599l);
 		criteria1.setField(field12);
 		criteria1.setValue("test5@zoho.com");
 		lockingRule.setCriteria(criteria1);
@@ -84,14 +84,14 @@ public class UpdateRecordLockingConfigurations
 		List<RestrictedCustomButton> restrictedCustomButtons = new ArrayList<RestrictedCustomButton>();
 		RestrictedCustomButton restrictedCustomButton = new RestrictedCustomButton();
 		restrictedCustomButton.setName("Send with Zoho Sign");
-		restrictedCustomButton.setId(5843104000000485570l);
+		restrictedCustomButton.setId(5843104485570l);
 		restrictedCustomButtons.add(restrictedCustomButton);
 		recordLock.setRestrictedCustomButtons(restrictedCustomButtons);
 		
 		List<LockExcludedProfile> lockExcludedProfiles = new ArrayList<LockExcludedProfile>();
 		LockExcludedProfile lockExcludedProfile = new LockExcludedProfile();
 		lockExcludedProfile.setName("Administrator");
-		lockExcludedProfile.setId(5843104000000026011l);
+		lockExcludedProfile.setId(5843104026011l);
 		lockExcludedProfiles.add(lockExcludedProfile);
 		recordLock.setLockExcludedProfiles(lockExcludedProfiles);
 		

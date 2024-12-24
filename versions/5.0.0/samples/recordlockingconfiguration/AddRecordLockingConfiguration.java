@@ -40,7 +40,7 @@ public class AddRecordLockingConfiguration
 		List<MinifiedField> excludedFields = new ArrayList<MinifiedField>();
 		MinifiedField excludedField = new MinifiedField();
 		excludedField.setAPIName("Annual_Revenue");
-		excludedField.setId(5843104000000002617l);
+		excludedField.setId(5843104002617l);
 		excludedFields.add(excludedField);
 		recordLock.setExcludedFields(excludedFields);
 		
@@ -55,7 +55,7 @@ public class AddRecordLockingConfiguration
 		
 		com.zoho.crm.api.recordlockingconfiguration.Field field1 = new com.zoho.crm.api.recordlockingconfiguration.Field();
 		field1.setAPIName("Email");
-		field1.setId(5843104000000002599l);
+		field1.setId(5843104002599l);
 		criteria.setField(field1);
 		criteria.setValue("test@zoho.com");
 		lockingRule.setCriteria(criteria);
@@ -75,14 +75,14 @@ public class AddRecordLockingConfiguration
 		List<RestrictedCustomButton> restrictedCustomButtons = new ArrayList<RestrictedCustomButton>();
 		RestrictedCustomButton restrictedCustomButton = new RestrictedCustomButton();
 		restrictedCustomButton.setName("Send Doc");
-		restrictedCustomButton.setId(5843104000000485570l);
+		restrictedCustomButton.setId(5843104485570l);
 		restrictedCustomButtons.add(restrictedCustomButton);
 		recordLock.setRestrictedCustomButtons(restrictedCustomButtons);
 		
 		List<LockExcludedProfile> lockExcludedProfiles = new ArrayList<LockExcludedProfile>();
 		LockExcludedProfile lockExcludedProfile = new LockExcludedProfile();
 		lockExcludedProfile.setName("Administrator");
-		lockExcludedProfile.setId(5843104000000026011l);
+		lockExcludedProfile.setId(5843104026011l);
 		lockExcludedProfiles.add(lockExcludedProfile);
 		recordLock.setLockExcludedProfiles(lockExcludedProfiles);
 		

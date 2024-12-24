@@ -23,15 +23,17 @@ import com.zoho.crm.api.fields.Fields;
 import com.zoho.crm.api.fields.FieldsOperations;
 import com.zoho.crm.api.fields.PickListValue;
 import com.zoho.crm.api.fields.FieldsOperations.CreateFieldParam;
+import com.zoho.crm.api.fields.ForecastCategory;
 import com.zoho.crm.api.fields.Profile;
 import com.zoho.crm.api.fields.SuccessResponse;
 import com.zoho.crm.api.dc.DataCenter.Environment;
 import com.zoho.crm.api.util.APIResponse;
+import com.zoho.crm.api.util.Choice;
 import com.zoho.crm.api.util.Model;
 
 public class UpdateField
 {
-	public static void updateField(String module, Long fieldId) throws Exception
+	public static void updateField(String moduleAPIName, Long fieldId) throws Exception
 	{
 		FieldsOperations fieldsOperations = new FieldsOperations();
 		BodyWrapper bodyWrapper = new BodyWrapper();
@@ -77,7 +79,7 @@ public class UpdateField
 		picklistfield.setLength(120);
 		List<Profile> picklistfieldprofiles = new ArrayList<Profile>();
 		Profile profile1 = new Profile();
-		profile1.setId(753477000000395001l);
+		profile1.setId(753477395001l);
 		profile1.setPermissionType("read_write");
 		picklistfieldprofiles.add(profile1);
 		
@@ -114,16 +116,54 @@ public class UpdateField
 		picklistvalue2.setId(7534776071l);
 		picklistvalue2.setDelete(true);
 		picklistvalues.add(picklistvalue2);
-		
 		picklistfield.setPickListValues(picklistvalues);
-		picklistfield.setProfiles(picklistfieldprofiles);
-		picklistfield.setPickListValuesSortedLexically(true);
-		picklistfield.setEnableColourCode(true);
 		fields.add(picklistfield);
+		/** end */
+		
+		Fields stagepicklistfield = new Fields();
+		stagepicklistfield.setFieldLabel("Stage");
+		stagepicklistfield.setDataType("picklist");
+		Tooltip stageToolTip = new Tooltip();
+		stageToolTip.setName("info_icon");
+		stageToolTip.setValue("Select your deals stage here");
+		stagepicklistfield.setTooltip(stageToolTip);
+		stagepicklistfield.setLength(120);
+		List<Profile> stagepicklistfieldprofiles = new ArrayList<Profile>();
+		Profile stageProfile1 = new Profile();
+		stageProfile1.setId(347726011l);
+		stageProfile1.setPermissionType("read_write");
+		stagepicklistfieldprofiles.add(stageProfile1);
+		stagepicklistfield.setProfiles(stagepicklistfieldprofiles);
+		
+		List<PickListValue> stagepicklistvalues = new ArrayList<PickListValue>();
+		
+		// Update Sample for Deals Stage field picklist.
+		// Note: Please add the all picklist actual_value and id.
+		PickListValue stagePickList = new PickListValue();
+		stagePickList.setDisplayValue("Qualification");
+		stagePickList.setSequenceNumber(1);
+		stagePickList.setDealCategory("Open");
+		stagePickList.setReferenceValue("Qualification");
+		stagePickList.setProbability(15);
+		ForecastCategory forecastCategory = new ForecastCategory();
+		forecastCategory.setName("Pipeline");
+		forecastCategory.setId(34706787l);
+		stagePickList.setForecastCategory(forecastCategory);
+		stagePickList.setActualValue("Qualification");
+		stagePickList.setId(34776801l);
+		stagePickList.setForecastType("Open");
+		stagePickList.setType(new Choice<String>("used"));
+		stagepicklistvalues.add(stagePickList);
+		
+		stagepicklistfield.setPickListValues(stagepicklistvalues);
+		
+		stagepicklistfield.setPickListValuesSortedLexically(true);
+		stagepicklistfield.setEnableColourCode(true);
+		fields.add(stagepicklistfield);
 		
 		bodyWrapper.setFields(fields);
 		ParameterMap paramInstance = new ParameterMap();
-		paramInstance.add(CreateFieldParam.MODULE, "Leads");
+		paramInstance.add(CreateFieldParam.MODULE, moduleAPIName);
 		APIResponse<ActionHandler> response = fieldsOperations.updateField(fieldId, bodyWrapper, paramInstance);
 		if (response != null)
 		{
@@ -197,7 +237,7 @@ public class UpdateField
 			Environment environment = USDataCenter.PRODUCTION;
 			Token token = new OAuthToken.Builder().clientID("Client_Id").clientSecret("Client_Secret").refreshToken("Refresh_Token").build();
 			new Initializer.Builder().environment(environment).token(token).initialize();
-			String moduleAPIName = "Leads";
+			String moduleAPIName = "Deals";
 			Long fieldId = 75347706070l;
 			updateField(moduleAPIName, fieldId);
 		}
