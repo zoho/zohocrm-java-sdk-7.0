@@ -138,7 +138,7 @@ public class GetAssociateGroupsOfUser
 			Environment environment = USDataCenter.PRODUCTION;
 			Token token = new OAuthToken.Builder().clientID("Client_Id").clientSecret("Client_Secret").refreshToken("Refresh_Token").build();
 			new Initializer.Builder().environment(environment).token(token).initialize();
-			Long id = 3477061000017236002l;
+			Long id = 347706117236002l;
 			getAssociateGroupsOfUser(id);
 		}
 		catch (Exception e)

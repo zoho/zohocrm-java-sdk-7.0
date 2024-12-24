@@ -40,18 +40,18 @@ public class UpdateDuplicateCheckPreference
 		List<TypeConfiguration> typeConfigurations = new ArrayList<TypeConfiguration>();
 		TypeConfiguration typeConfiguration = new TypeConfiguration();
 		MappedModule mappedModule = new MappedModule();
-		mappedModule.setId("3477061000000002175");
+		mappedModule.setId("3477061002175");
 		mappedModule.setAPIName("Leads");
 		typeConfiguration.setMappedModule(mappedModule);
 		List<FieldMappings> fieldMappings = new ArrayList<FieldMappings>();
 		FieldMappings fieldMapping = new FieldMappings();
 		CurrentField currentField = new CurrentField();
-		currentField.setId("3477061000006570001");
+		currentField.setId("34770616570001");
 		currentField.setAPIName("Email_1");
 		fieldMapping.setCurrentField(currentField);
 		
 		MappedField mappedField = new MappedField();
-		mappedField.setId("3477061000023537018");
+		mappedField.setId("347706123537018");
 		mappedField.setAPIName("Email_2");
 		fieldMapping.setMappedField(mappedField);
 		

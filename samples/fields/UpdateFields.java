@@ -57,7 +57,7 @@ public class UpdateFields
 		field.setExternal(external);
 		List<Profile> profiles = new ArrayList<Profile>();
 		Profile profile = new Profile();
-		profile.setId(3477061000000026014l);
+		profile.setId(3477061026014l);
 		profile.setPermissionType("read_write");
 		profiles.add(profile);
 		field.setProfiles(profiles);
