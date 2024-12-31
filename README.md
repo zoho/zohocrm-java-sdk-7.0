@@ -25,6 +25,16 @@ License
 
 ## Latest Version
 
+- [6.0.0](/versions/6.0.0/README.md)
+
+  - Removed module param in **ScoringRulesOperations** class **getScoringRule** method.
+  - Update recordId, moduleAPIName to moduleAPIName, recordId param location in **TagsOperations** class addTags method.
+  - Update recordId, moduleAPIName to moduleAPIName, recordId param location in **TagsOperations** class removeTags method.
+  - **CadencesExecutionOperations** class method name changed(enrolCadences to enrollCadences).
+  - **CadencesExecutionOperations** class method name changed(unenrolCadences to unenrollCadences).
+  - Handled FileStore save and update token method issue.
+  - Update CADataCenter Accounts URL.
+
 - [5.0.0](/versions/5.0.0/README.md)
 
   - Added new **page_token** param in GetAttachmentsParam class.
@@ -124,10 +134,10 @@ For older versions, please [refer](https://github.com/zoho/zohocrm-java-sdk-7.0/
 ## Including the SDK in your project
 You can include the SDK to your project using:
 - Maven
-- [Gradle](/versions/5.0.0/README.md#including-the-sdk-in-your-project)
-- [Download SDK jar](https://maven.zohodl.com/com/zoho/crm/zohocrm-java-sdk-7-0/5.0.0/zohocrm-java-sdk-7-0-5.0.0.jar)
+- [Gradle](/versions/6.0.0/README.md#including-the-sdk-in-your-project)
+- [Download SDK jar](https://maven.zohodl.com/com/zoho/crm/zohocrm-java-sdk-7-0/6.0.0/zohocrm-java-sdk-7-0-6.0.0.jar)
 
-For including the latest [version](https://github.com/zoho/zohocrm-java-sdk-7.0/releases/tag/5.0.0) using Maven, include the following in your **pom.xml** file, which will get created once your **Java** project is created using Maven.
+For including the latest [version](https://github.com/zoho/zohocrm-java-sdk-7.0/releases/tag/6.0.0) using Maven, include the following in your **pom.xml** file, which will get created once your **Java** project is created using Maven.
 
     ```xml
     <repositories>
@@ -140,7 +150,7 @@ For including the latest [version](https://github.com/zoho/zohocrm-java-sdk-7.0/
         <dependency>
             <groupId>com.zoho.crm</groupId>
             <artifactId>zohocrm-java-sdk-7-0</artifactId>
-            <version>5.0.0</version>
+            <version>6.0.0</version>
         </dependency>
     </dependencies>
     ```
@@ -160,4 +170,4 @@ For example, if you generate the tokens for your Sandbox environment in the CN d
 
 ---
 
-For more details, kindly refer [here](/versions/5.0.0/README.md).
+For more details, kindly refer [here](/versions/6.0.0/README.md).
